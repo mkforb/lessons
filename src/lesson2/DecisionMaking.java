@@ -109,5 +109,6 @@ public class DecisionMaking {
         for (int num = 2, i = 1; i <= 20; num += 2, i++) {
             System.out.println(num);
         }
+
     }
 }
