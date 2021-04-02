@@ -6,4 +6,10 @@ public interface RestAble {
     // У интерфейсов нет конструкторов
     // Нельзя создать объект интерфейса
     void rest();
+
+    // Это метод с реализацией, обозначается словом default
+    // Если есть метод с реализацией, в классе можно его переопределить, а можно пользоваться в таком виде
+    default void runFromField() {
+        System.out.println("RestAble runFromField");
+    }
 }

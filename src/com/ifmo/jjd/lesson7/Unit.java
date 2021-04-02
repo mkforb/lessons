@@ -5,10 +5,10 @@ abstract public class Unit implements RestAble {
     // Класс может имплементировать сколько угодно интерфейсов
     // Интерфейс обязывает класс реализовать все абстрактные методы, в нем перечисленные, на усмотрение класса
     protected int healthScore;
-    protected int maxHealthScore;
+    protected final int maxHealthScore;
 
     public Unit(int healthScore) {
-        this.maxHealthScore = healthScore;
+        this.healthScore = healthScore;
         maxHealthScore = healthScore;
     }
 

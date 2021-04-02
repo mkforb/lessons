@@ -1,5 +1,7 @@
 package com.ifmo.jjd.lesson7;
 
+import com.ifmo.jjd.lesson7.utils.Randoms;
+
 import java.util.Scanner;
 
 public class Application {
@@ -13,7 +15,7 @@ public class Application {
 
         Knight bKnight = (Knight) bUnit1; // Чтобы сузить тип данных, исп-ся приведение типа. Но если bUnit1 будет не типа Knight, приведение типов приведет к ошибке
 
-        Unit unit = new King(34);
+        Unit unit = new King();
 
         // Когда заранее не известен тип данных
         Scanner scanner = new Scanner(System.in);
@@ -30,5 +32,11 @@ public class Application {
         battleUnit.attack(infantry);
 
         System.out.println(battleUnit.getAttackScore());
+
+        King king1 = new King();
+        King king2 = new King();
+        king1.startBattle(king2);
+        System.out.println(king1.getAliveCount());
+        System.out.println(king2.getAliveCount());
     }
 }
