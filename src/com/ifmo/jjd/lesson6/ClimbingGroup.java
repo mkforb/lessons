@@ -29,6 +29,31 @@ public class ClimbingGroup {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof ClimbingGroup)) return false;
+        ClimbingGroup that = (ClimbingGroup) o;
+        return Objects.equals(mountain, that.mountain) && Arrays.equals(climbers, that.climbers);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(mountain);
+        result = 31 * result + Arrays.hashCode(climbers);
+        return result;
+    }
+
+    @Override
+    public ClimbingGroup clone() {
+        ClimbingGroup copy = new ClimbingGroup(mountain.clone(), climbers.length);
+        copy.climbers = climbers.clone();
+        /*for (int i = 0; i < copy.climbers.length; i++) {
+            copy.climbers[i] = climbers[i].clone();
+        }*/
+        return copy;
+    }
+
+    @Override
     public String toString() {
         return "ClimbingGroup{" +
                 "mountain=" + mountain +

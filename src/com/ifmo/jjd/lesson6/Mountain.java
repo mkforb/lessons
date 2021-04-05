@@ -1,6 +1,8 @@
 package com.ifmo.jjd.lesson6;
 
-public class Mountain {
+import java.util.Objects;
+
+public class Mountain implements Cloneable {
     // Принято описывать в такой последовательности:
     // Свойства
     // Конструкторы
@@ -42,6 +44,29 @@ public class Mountain {
             throw new IllegalArgumentException("height < 100");
         }
         this.height = height;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Mountain)) return false;
+        Mountain mountain = (Mountain) o;
+        return height == mountain.height && Objects.equals(name, mountain.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, height);
+    }
+
+    @Override
+    public Mountain clone() {
+        // Со строками можно использовать поверхностную копию
+        try {
+            return (Mountain) super.clone();
+        } catch (CloneNotSupportedException e) {
+            return null;
+        }
     }
 
     @Override

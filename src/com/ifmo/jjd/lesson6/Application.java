@@ -38,5 +38,33 @@ public class Application {
 
         System.out.println(everest);
         System.out.println(elbrus);
+
+        // сравнить и клонировать группы
+        Climber cl1 = new Climber();
+        Mountain m1 = new Mountain("Гора", 1000);
+        ClimbingGroup gr1 = new ClimbingGroup(m1, 0);
+        gr1.addClimber(cl1);
+
+        Climber cl2 = new Climber();
+        Mountain m2 = new Mountain("Гора", 1000);
+        ClimbingGroup gr2 = new ClimbingGroup(m2, 0);
+        gr2.addClimber(cl2);
+
+        System.out.println(gr1);
+        System.out.println(gr2);
+        System.out.println(gr1.equals(gr2));
+
+        Climber cl3 = new Climber();
+        Mountain m3 = new Mountain("Гора", 1000);
+        ClimbingGroup gr3 = new ClimbingGroup(m3, 1);
+        gr3.addClimber(cl3);
+
+        ClimbingGroup gr4 = gr3.clone();
+
+        cl3.setFullName("Tata");
+        cl3.setAge(20);
+
+        System.out.println(gr3);
+        System.out.println(gr4);
     }
 }
