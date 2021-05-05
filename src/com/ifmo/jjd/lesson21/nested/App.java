@@ -1,4 +1,4 @@
-package com.ifmo.jjd.lesson21;
+package com.ifmo.jjd.lesson21.nested;
 
 /**
  * Created by User on 05.05.2021.

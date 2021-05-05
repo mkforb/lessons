@@ -1,4 +1,4 @@
-package com.ifmo.jjd.lesson21;
+package com.ifmo.jjd.lesson21.nested;
 
 import java.util.ArrayList;
 
