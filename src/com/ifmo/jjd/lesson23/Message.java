@@ -3,7 +3,7 @@ package com.ifmo.jjd.lesson23;
 import java.time.LocalDateTime;
 
 public class Message implements Comparable<Message>{
-    private String sender;
+    public String sender;
     private LocalDateTime sent;
 
     public Message(String sender) {
