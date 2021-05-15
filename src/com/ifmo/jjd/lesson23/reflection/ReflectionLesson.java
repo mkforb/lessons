@@ -88,7 +88,7 @@ public class ReflectionLesson {
     }
 
     // Д/з:
-    // Написать рефдексивный статический метод toString(Object o)
+    // Написать рефлексивный статический метод toString(Object o)
     // toString(Object);
     // obj: int, boolean, String, User, String[]
     public static void toString(Object o) {
