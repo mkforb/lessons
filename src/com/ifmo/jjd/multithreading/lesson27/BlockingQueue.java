@@ -15,7 +15,7 @@ public class BlockingQueue {
         // Можно задать макс. кол-во эл-тов в очереди
         stringLinked = new LinkedBlockingQueue<>(10);
 
-        // Требует задачния кол-во элементов
+        // Требует задания кол-во элементов
         ArrayBlockingQueue<String> arrayQueue = new ArrayBlockingQueue<>(30); // Блокирующие методы put и take
         // put - добавляет эл. в очередь и блокирует, если очередь полная
         // take - удаляет эл. из очереди и блокирует, если очередь пустая
